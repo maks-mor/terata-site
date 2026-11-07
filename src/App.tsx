@@ -1055,7 +1055,7 @@ export default function App() {
                     Julia Umurova
                   </h3>
                   <p className="text-xs sm:text-sm text-[#94A3B8] mt-1 font-medium">
-                    20+ Years in Operational Risk & Anti-Fraud at Citi • Oxford Saïd Business School, AI Ethics & Regulation
+                    20+ Years in Banking, Fraud Prevention & Risk Management • Oxford Saïd Business School, AI Ethics, Regulation & Compliance
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -1063,10 +1063,10 @@ export default function App() {
                     Risk & Blind-Spot Analysis
                   </span>
                   <span className="text-xs px-3 py-1 rounded-full bg-slate-800/80 border border-[#C7D2E0]/10 text-slate-300">
-                    Data Confidentiality & AI Compliance
+                    Data Confidentiality & Responsible AI
                   </span>
                   <span className="text-xs px-3 py-1 rounded-full bg-slate-800/80 border border-[#C7D2E0]/10 text-slate-300">
-                    Investor-Ready Packaging
+                    Investor-Ready Project Assessment
                   </span>
                 </div>
               </div>
@@ -1095,13 +1095,25 @@ export default function App() {
                   }
                 >
                   <p>
-                    For more than 20 years, Julia’s job was to ask the questions nobody wanted to hear. At Citi, she managed operational risk, risk management and anti-fraud strategy, including as Vice President in London, one of the world’s busiest financial hubs. She saw from the inside how serious institutions judge a project: not by how exciting it sounds, but by whether it survives hard scrutiny. She also saw the opposite: promising ideas that collapsed because no one checked the weak spots in time.
+                    For more than 20 years, Julia has built her career in international banking, specialising in fraud prevention, operational risk, internal controls and governance.
                   </p>
                   <p>
-                    At Terata, she brings the banking discipline of the “second line of defense” (2LOD) into the world of new ideas, gently and in a creator’s favor. She helps uncover hidden risks and blind spots, separate facts from wishful thinking, and build strict rules for data confidentiality. Her belief is simple: it’s far better to hear a tough question from a friendly partner today than from an investor or grant committee tomorrow.
+                    Her experience spans senior leadership positions, including Vice President in London with global risk oversight responsibilities. She has led teams, developed fraud prevention strategies, challenged complex risk assessments and helped strengthen control frameworks across international financial operations.
                   </p>
                   <p>
-                    Julia knows the criteria financial and regulatory institutions use to assess risk, and she helps shape Terata’s Project Passports in the language that institutional investors, large corporations and international grant funds, such as the UK’s ARIA, understand. Her training at Oxford Saïd Business School in AI ethics and regulation keeps Terata transparent and responsible in how it uses AI and handles every creator’s work.
+                    Throughout her career, Julia has learned that even the most promising initiatives can fail when critical assumptions go unchallenged and hidden risks are discovered too late. She understands the importance of asking difficult questions early — before weaknesses become costly problems.
+                  </p>
+                  <p>
+                    At Terata, Julia brings this experience into the world of entrepreneurship and innovation. She helps creators identify blind spots, assess potential risks, challenge assumptions and strengthen their ideas without compromising the creativity that makes them valuable.
+                  </p>
+                  <p>
+                    She also contributes to Terata&apos;s approach to data confidentiality, responsible AI and the protection of creators&apos; intellectual work. Her training in AI Ethics, Regulation and Compliance at Oxford Saïd Business School further informs this work.
+                  </p>
+                  <p>
+                    Julia helps shape Terata&apos;s Project Passports, ensuring that ideas are presented with clarity, credibility and a structured understanding of their risks — qualities that matter when approaching investors, corporate partners and funding organisations.
+                  </p>
+                  <p>
+                    Her philosophy is simple: rigorous thinking should protect ambition, not limit it.
                   </p>
                 </ExpandableBio>
               </div>
