@@ -1095,7 +1095,10 @@ export default function App() {
                   }
                 >
                   <p>
-                    For more than 20 years, Julia has built her career in international banking, specialising in fraud prevention, operational risk, internal controls and governance. Her experience spans senior leadership positions, including Vice President in London with global risk oversight responsibilities. She has led teams, developed fraud prevention strategies, challenged complex risk assessments and helped strengthen control frameworks across international financial operations. Throughout her career, Julia has learned that even the most promising initiatives can fail when critical assumptions go unchallenged and hidden risks are discovered too late. She understands the importance of asking difficult questions early — before weaknesses become costly problems.
+                    For more than 20 years, Julia has built her career in international banking, specialising in fraud prevention, operational risk, internal controls and governance. Her experience spans senior leadership positions, including Vice President in London with global risk oversight responsibilities. She has led teams, developed fraud prevention strategies, challenged complex risk assessments and helped strengthen control frameworks across international financial operations.
+                  </p>
+                  <p>
+                    Throughout her career, Julia has learned that even the most promising initiatives can fail when critical assumptions go unchallenged and hidden risks are discovered too late. She understands the importance of asking difficult questions early — before weaknesses become costly problems.
                   </p>
                   <p>
                     At Terata, Julia brings this experience into the world of entrepreneurship and innovation. She helps creators identify blind spots, assess potential risks, challenge assumptions and strengthen their ideas without compromising the creativity that makes them valuable.
