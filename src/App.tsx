@@ -921,7 +921,7 @@ export default function App() {
                     Maksym Morenets
                   </h3>
                   <p className="text-xs sm:text-sm text-[#94A3B8] mt-1 font-medium">
-                    Author of the Terata Methodology • Founder of FSIF Sp. z o.o. (Poland)
+                    Author of the Terata Methodology • Founder of FSIF Ltd. (Poland)
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -1148,7 +1148,7 @@ export default function App() {
                 </div>
                 <div className="p-5 rounded-2xl bg-[#070B14]/80 border border-[#C7D2E0]/10">
                   <span className="block font-['JetBrains_Mono'] text-base font-bold text-white mb-1">
-                    FSIF Sp. z o.o. (Poland)
+                    FSIF Ltd. (Poland)
                   </span>
                   <span className="text-xs text-[#94A3B8]">
                     Official European entity behind the Terata platform
@@ -1365,7 +1365,7 @@ export default function App() {
             </div>
 
             <div className="text-center lg:text-right font-['JetBrains_Mono'] text-[11px] text-slate-500">
-              FSIF Sp. z o.o. • KRS: [TO CONFIRM] • NIP: [TO CONFIRM] • [TO CONFIRM: registered address], Poland
+              First Step Idea Factory Ltd. (FSIF P.S.A.) • KRS: 0001192004 • NIP: 7011275537 • REGON: 542622489 • ul. Stefana Batorego 18/108, 02-591 Warszawa, Poland
             </div>
           </div>
         </div>
