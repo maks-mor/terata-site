@@ -177,10 +177,59 @@
   .moat-thesis { margin-top: 24px; font-size: 0.95rem; color: var(--ink); font-weight: 500; }
 
   /* Status table & Specimen */
-  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
-  th { text-align: left; font-weight: 600; color: var(--ink); font-size: 0.8125rem; padding: 12px 16px 12px 0; border-bottom: 1px solid var(--ink); text-transform: uppercase; letter-spacing: 0.04em; }
-  td { padding: 16px 16px 16px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
-  td.state { white-space: nowrap; width: 28%; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; table-layout: fixed; }
+  th { text-align: left; font-weight: 600; color: var(--ink); font-size: 0.8125rem; padding: 14px 16px; border-bottom: 2px solid var(--ink); text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 16px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.5; color: var(--text); word-wrap: break-word; }
+  tr:hover td { background: rgba(248, 250, 252, 0.6); }
+
+  .status-table col.col-comp { width: 40%; }
+  .status-table col.col-status { width: 18%; }
+  .status-table col.col-scope { width: 42%; }
+
+  .tracks-table {
+    border: 1px solid var(--line);
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .tracks-table th {
+    background: #f8fafc;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    padding: 14px 18px;
+  }
+  .tracks-table td {
+    padding: 20px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tracks-table tr:last-child td {
+    border-bottom: none;
+  }
+  .tracks-table .track-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .tracks-table .track-sub {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    line-height: 1.4;
+    display: block;
+  }
+  .tracks-table .track-status {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
   .figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 44px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
   .figures strong { display: block; font-size: 2rem; font-weight: 300; color: var(--ink); line-height: 1.1; margin-bottom: 6px; }
   .figures span { font-size: 0.875rem; color: var(--muted); display: block; }
@@ -634,15 +683,20 @@
       </div>
     </div>
 
-    <table>
+    <table class="status-table">
+      <colgroup>
+        <col class="col-comp">
+        <col class="col-status">
+        <col class="col-scope">
+      </colgroup>
       <thead><tr><th>System Component</th><th>Current Status</th><th>Verification Scope</th></tr></thead>
       <tbody>
-        <tr><td>Entry dialogue across three coordinated AI agents</td><td class="state"><span class="tag live">Live in beta</span></td><td>Working MVP at app.terata.pro (third-party US cloud AI; do not submit confidential ideas)</td></tr>
-        <tr><td>Downloadable Project Passport (PDF)</td><td class="state"><span class="tag live">Live in beta</span></td><td>Baseline structure today; tamper-evident fingerprint planned in Phase 1</td></tr>
-        <tr><td>Private Core hosting on Swiss/EEA open models (incl. Apertus 1.5)</td><td class="state"><span class="tag build">In development</span></td><td>Planned Phase 2 architecture &amp; external security review</td></tr>
-        <tr><td>Simplified end-to-end path (Layers I–III)</td><td class="state"><span class="tag build">In development</span></td><td>Phase 2 prototype (first 10 full passport paths)</td></tr>
-        <tr><td>Day-zero cap table &amp; registry-ready package export (Layer III)</td><td class="state"><span class="tag plan">Designed</span></td><td>Test mode in Phase 3 (free for partners, no live issuance)</td></tr>
-        <tr><td>Analytical stress engine &amp; trust weights</td><td class="state"><span class="tag research">Research</span></td><td>Planned <a href="https://www.innosuisse.admin.ch" target="_blank" rel="noopener noreferrer">Innosuisse</a> track (seeking Swiss university partner)</td></tr>
+        <tr><td>Entry dialogue across three coordinated AI agents</td><td><span class="tag live">Live in beta</span></td><td>Working MVP at app.terata.pro (third-party US cloud AI; do not submit confidential ideas)</td></tr>
+        <tr><td>Downloadable Project Passport (PDF)</td><td><span class="tag live">Live in beta</span></td><td>Baseline structure today; tamper-evident fingerprint planned in Phase 1</td></tr>
+        <tr><td>Private Core hosting on Swiss/EEA open models (incl. Apertus 1.5)</td><td><span class="tag build">In development</span></td><td>Planned Phase 2 architecture &amp; external security review</td></tr>
+        <tr><td>Simplified end-to-end path (Layers I–III)</td><td><span class="tag build">In development</span></td><td>Phase 2 prototype (first 10 full passport paths)</td></tr>
+        <tr><td>Day-zero cap table &amp; registry-ready package export (Layer III)</td><td><span class="tag plan">Designed</span></td><td>Test mode in Phase 3 (free for partners, no live issuance)</td></tr>
+        <tr><td>Analytical stress engine &amp; trust weights</td><td><span class="tag research">Research</span></td><td>Planned <a href="https://www.innosuisse.admin.ch" target="_blank" rel="noopener noreferrer">Innosuisse</a> track (seeking Swiss university partner)</td></tr>
       </tbody>
     </table>
 
@@ -679,26 +733,63 @@
     <div class="tracks-wrap">
       <h2>Three institutional asset tracks</h2>
       <p class="intro" style="margin-bottom:28px;">Starting where Swiss corporate registry law is proven, then expanding with licensed institutional partners.</p>
-      <table>
-        <thead><tr><th>Asset Track</th><th>What Is Prepared (Issuance via Partners)</th><th>Target Swiss Infrastructure</th><th>Status</th></tr></thead>
+      <table class="tracks-table">
+        <colgroup>
+          <col style="width: 22%;">
+          <col style="width: 32%;">
+          <col style="width: 26%;">
+          <col style="width: 20%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Asset Track</th>
+            <th>What Is Prepared (via Partners)</th>
+            <th>Target Swiss Infrastructure</th>
+            <th>Status</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
-            <td><strong>1. Born-Digital Equity</strong></td>
+            <td>
+              <span class="track-title">1. Born-Digital Equity</span>
+              <span class="track-sub">Corporate registry track</span>
+            </td>
             <td>Day-zero cap tables and share schemas for Swiss ventures prepared for legal review and corporate digital share registers.</td>
-            <td>Corporate digital share registries (e.g., Aequitec); regulated CSDs (SIX SIS) and DLT venues (BX Digital) only at scale via licensed partners</td>
-            <td class="state"><span class="tag plan">Designed</span><br><span style="font-size:0.8125rem; color:var(--muted);">Tokenised private-share issuance in a regulated CSD proven (SDX × F10 × Aequitec, 2022)<sup><a href="#s6">6</a></sup>; first test-mode packages planned in Phase 3.</span></td>
+            <td>Corporate digital share registries (e.g., Aequitec); regulated CSDs (SIX SIS) and DLT venues (BX Digital) only at scale via licensed partners.</td>
+            <td>
+              <div class="track-status">
+                <span class="tag plan">Designed</span>
+                <span class="track-sub">Tokenised private-share issuance in a regulated CSD proven (SDX × F10 × Aequitec, 2022)<sup><a href="#s6">6</a></sup>; first test-mode packages planned in Phase 3.</span>
+              </div>
+            </td>
           </tr>
           <tr>
-            <td><strong>2. Licence &amp; Royalty Rights</strong></td>
+            <td>
+              <span class="track-title">2. Licence &amp; Royalty Rights</span>
+              <span class="track-sub">Standalone IP track</span>
+            </td>
             <td>Contractual or tokenised revenue-sharing rights structured for review on Terata-documented patent dossiers or software IP.</td>
-            <td>FINMA-licensed DLT venues &amp; partner issuers (<em>Registerwertrechte</em><sup><a href="#s5">5</a></sup> / intermediated structures)</td>
-            <td class="state"><span class="tag plan">Designed</span><br><span style="font-size:0.8125rem; color:var(--muted);">Co-design planned with Swiss IP attorneys and legal partners.</span></td>
+            <td>FINMA-licensed DLT venues &amp; partner issuers (<em>Registerwertrechte</em><sup><a href="#s5">5</a></sup> / intermediated structures).</td>
+            <td>
+              <div class="track-status">
+                <span class="tag plan">Designed</span>
+                <span class="track-sub">Co-design planned with Swiss IP attorneys and legal partners.</span>
+              </div>
+            </td>
           </tr>
           <tr>
-            <td><strong>3. Partner-Led IP Data &amp; Instruments</strong></td>
+            <td>
+              <span class="track-title">3. Partner-Led IP Data &amp; Instruments</span>
+              <span class="track-sub">Market data track</span>
+            </td>
             <td>Standardised risk-review benchmarks and partner-issued instruments referencing Terata data standards.</td>
-            <td>FINMA-licensed Swiss banks &amp; partner venues (Terata provides software and data only)</td>
-            <td class="state"><span class="tag research">Research</span><br><span style="font-size:0.8125rem; color:var(--muted);">Scale phase (Phase 4+) alongside licensed institutional partners.</span></td>
+            <td>FINMA-licensed Swiss banks &amp; partner venues (Terata provides software and data only).</td>
+            <td>
+              <div class="track-status">
+                <span class="tag research">Research</span>
+                <span class="track-sub">Scale phase (Phase 4+) alongside licensed institutional partners.</span>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
