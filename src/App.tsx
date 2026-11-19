@@ -1352,7 +1352,7 @@ export default function App() {
                 Community
               </a>
               <span className="text-slate-700">|</span>
-              <a href="/infrastructure" className="hover:text-cyan-400 transition-colors">
+              <a href="/infrastructure/" className="hover:text-cyan-400 transition-colors">
                 Infrastructure
               </a>
               <span className="text-slate-700">|</span>

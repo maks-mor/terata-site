@@ -21,8 +21,37 @@ const securityPolicy = {
   ],
 };
 
+// Редирект /infrastructure -> /infrastructure/ чтобы Vite preview не отдавал SPA fallback (главную страницу)
+const infrastructureRedirect = {
+  name: 'infrastructure-redirect',
+  configurePreviewServer(server: any) {
+    server.middlewares.use((req: any, res: any, next: any) => {
+      const url = req.url?.split('?')[0];
+      if (url === '/infrastructure') {
+        const query = req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+        res.writeHead(301, { Location: `/infrastructure/${query}` });
+        res.end();
+        return;
+      }
+      next();
+    });
+  },
+  configureServer(server: any) {
+    server.middlewares.use((req: any, res: any, next: any) => {
+      const url = req.url?.split('?')[0];
+      if (url === '/infrastructure') {
+        const query = req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+        res.writeHead(301, { Location: `/infrastructure/${query}` });
+        res.end();
+        return;
+      }
+      next();
+    });
+  },
+};
+
 export default defineConfig({
-  plugins: [react(), tailwindcss(), securityPolicy],
+  plugins: [react(), tailwindcss(), securityPolicy, infrastructureRedirect],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
